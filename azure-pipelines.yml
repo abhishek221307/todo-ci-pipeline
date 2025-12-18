@@ -17,4 +17,10 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- task: PublishBuildArtifacts@1
+  displayName: "PublishBuildArtifacts"
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)/build.zip'
+    ArtifactName: 'reactjs'
+    publishLocation: 'Container'
 
