@@ -20,7 +20,7 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: "PublishBuildArtifacts"
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)/build.zip'
-    ArtifactName: 'reactjs'
-    publishLocation: 'Container'
+    targetPath: '$(System.DefaultWorkingDirectory)/build/'
+    artifact: 'todo-ui'
+    publishLocation: 'pipeline'
 
