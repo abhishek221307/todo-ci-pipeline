@@ -20,9 +20,9 @@ stages:
           npm install
           retire --exitwith 0
 
- - stage: StaticCodeAnalysis
-   displayName: Static Code Analysis
-   jobs: 
+- stage: StaticCodeAnalysis
+  displayName: Static Code Analysis
+  jobs: 
    - job: SonarQubeAnalysis
      displayName: Static Code Analysis (SonarQube)
      steps:
